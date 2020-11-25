@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', function (req, res) {
     Cities.retrieveAll(function (err, cities) {
-        if (err.error)
+        if (err)
             return res.json(err);
         return res.json(cities);
     });

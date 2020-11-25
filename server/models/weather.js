@@ -5,7 +5,7 @@ const API_KEY = '68570b9bf4b27ec429ce40ff2126312b'
 class Weather {
     static retrieveByCity (city, callback) {
         request({
-            uri: `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`,
+            uri: `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`,
             json: true
         }).then(function (res) {
             callback(res);
